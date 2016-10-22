@@ -5,6 +5,7 @@ body{
 	font-family:Arial,'Lucia Sans Unicode';
 	line-height:1.5;
 	text-align:left;
+
 }
 h2{
 	color:#1565C0;}
@@ -21,7 +22,7 @@ a:hover,a:active{
 	clear:both;
 }
 .mainHeader img{
-	width:74%;
+	width:20%;
 	height:auto;
 	margin:2% 0;
 }
@@ -34,16 +35,19 @@ a:hover,a:active{
 	
 }
 .mainHeader nav ul{
-	list-style:none;
+	list-style-type:none;
 	margin:0 auto;
 	overflow:hidden;
 	width:100%;
+}
+.mainHeader nav ul li .dropdown{
+	display:inline-block; /*problem on displaying the list in a vertical form not horizontal*/
 }
 .mainHeader nav ul li{
 	float:left;
 	display:inline-block;
 	text-align:center;
-	padding:1px 10px;
+	padding:0px 0px;
 	color:#FFF;
 	font-weight:bold;
 }
@@ -51,22 +55,49 @@ a:hover,a:active{
 	color:#FFF;
 	display:inline-block;
 	padding:10px 25px;
-	height:43px;
+	height:45px;
 }
 .mainHeader nav a:hover,.mainHeader nav a:active{
 	color:#FFF;
 	display:inline-block;
 }
 .mainHeader nav a:hover,.mainHeader nav a:active,
-.mainHeader nav .active a:link,.mainHeader nav .active a:visited{
+.mainHeader nav .active a:link,.mainHeader nav .active a:visited, .dropdown:hover .dropbtn{
 	background-color:#4DB6AC;
 	text-shadow:5px 5px 10px #212121;
+
 }
-.mainHeader nav ul li a{
+.dropbtn{
+	display:inline-block;
+	color:white;
+	text-align:center;
+	padding: 14px 16px;
+	text-decoration:none;
+}
+.mainHeader nav ul li a {
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }
+.dropdown-content{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	display:none;
+	position:absolute;
+	background-color:#3498DB;
+	min-width:160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+.dropdown-content a:hover {background-color:#1565C0}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .mainContent{
 	line-height:25px;
 	border-radius:5px;
@@ -163,7 +194,7 @@ body {font-family: Verdana,sans-serif;}
 
 .month ul li {
     color: white;
-    font-size: 20px;
+    font-size: 3%;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -212,3 +243,65 @@ body {font-family: Verdana,sans-serif;}
     background: #1abc9c;
     color: white;
 }
+@media only screen and (max-width:600px){
+	.body{
+		width:90%;
+		font-size:95%;
+	}
+	.mainHeader img{
+		width:118%;
+	}
+	.mainHeader nav{
+
+	height:210px;/*45 * 6 = 270,rough calculations*/
+	
+}
+	.mainHeader nav ul{
+		padding-left:0;
+	
+	}
+	.mainHeader nav ul li{
+		width:100%;
+		text-align:center;
+	}
+	.mainHeader nav a:link,.mainHeader nav a:visited{
+
+		padding:9px 25px;
+		height:42px;
+		display:block;
+	}
+	.mainContent{
+		line-height:26px;
+		
+	}
+	.content{
+		width:100%;
+		float:left;
+		margin-top:2%
+	}
+	.topcontent{
+	
+		margin-top:2%;
+	}
+	.bottomcontent{
+
+		margin-top:3%;
+	}
+	.top-sidebar{
+		width:100%;
+		padding:2% 3%;
+		margin: 3% 0% 2% 0%;/*margin 2% top 0% right, 2% bottom,3% left*/
+	}
+	.middle-sidebar{
+		display:none;
+	}
+	.bottom-sidebar{
+		width:100%;
+		margin-left:0%;
+		margin-bottom:2%;
+		padding:2% 3%;
+	}
+	
+	
+}
+
